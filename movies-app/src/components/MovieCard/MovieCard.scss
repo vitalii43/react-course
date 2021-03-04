@@ -1,0 +1,25 @@
+@import "../../styles/variables.scss";
+
+.movie-img-container {
+  margin-bottom: $spacer-s;
+  .movie-img {
+    width: 100%;
+  }
+}
+
+.movie-details {
+  display: flex;
+  justify-content: space-between;
+  color: $grey-light-1;
+
+  .movie-description {
+    color: $grey-light-2;
+  }
+
+  .movie-year {
+    align-self: flex-start;
+    padding: 0.2rem 0.5rem;
+    border: 1px solid $grey-light-1;
+    border-radius: 5px;
+  }
+}

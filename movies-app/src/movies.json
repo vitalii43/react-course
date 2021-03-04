@@ -1,0 +1,53 @@
+{
+  "list": [
+    {
+      "id": "0",
+      "name": "Pupl Fiction",
+      "description": "Action & Adventure",
+      "year": 2004,
+      "img": "https://upload.wikimedia.org/wikipedia/uk/8/82/Pulp_Fiction_cover.jpg"
+    },
+    {
+      "id": "1",
+      "name": "Pupl Fiction",
+      "description": "Action & Adventure",
+      "year": 2004,
+      "img": "https://upload.wikimedia.org/wikipedia/ru/4/46/%D0%9F%D0%BE%D1%81%D1%82%D0%B5%D1%80_%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D0%B0_%C2%AB%D0%91%D0%BE%D0%B3%D0%B5%D0%BC%D0%BD%D0%B0%D1%8F_%D1%80%D0%B0%D0%BF%D1%81%D0%BE%D0%B4%D0%B8%D1%8F%C2%BB.jpg"
+    },
+    {
+      "id": "2",
+      "name": "Pupl Fiction",
+      "description": "Action & Adventure",
+      "year": 2004,
+      "img": "https://upload.wikimedia.org/wikipedia/ru/thumb/2/26/%D0%98%D1%81%D0%BA%D1%83%D1%81%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9_%D0%B8%D0%BD%D1%82%D0%B5%D0%BB%D0%BB%D0%B5%D0%BA%D1%82_%28%D1%84%D0%B8%D0%BB%D1%8C%D0%BC_%D0%91%D0%B5%D0%BD%D0%B0_%D0%A4%D0%B0%D0%BB%D1%8C%D0%BA%D0%BE%D0%BD%D0%B5%29.jpg/320px-%D0%98%D1%81%D0%BA%D1%83%D1%81%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9_%D0%B8%D0%BD%D1%82%D0%B5%D0%BB%D0%BB%D0%B5%D0%BA%D1%82_%28%D1%84%D0%B8%D0%BB%D1%8C%D0%BC_%D0%91%D0%B5%D0%BD%D0%B0_%D0%A4%D0%B0%D0%BB%D1%8C%D0%BA%D0%BE%D0%BD%D0%B5%29.jpg"
+    },
+    {
+      "id": "3",
+      "name": "Pupl Fiction",
+      "description": "Action & Adventure",
+      "year": 2004,
+      "img": "https://m.media-amazon.com/images/M/MV5BZDEzNWFjMDMtMWQ2NS00OWZjLWI4YTctNmRlM2JkZGYxM2Q5XkEyXkFqcGdeQXVyMTAyOTE2ODg0._V1_FMjpg_UX747_.jpg"
+    },
+    {
+      "id": "4",
+      "name": "Pupl Fiction",
+      "description": "Action & Adventure",
+      "year": 2004,
+      "img": "https://upload.wikimedia.org/wikipedia/uk/8/82/Pulp_Fiction_cover.jpg"
+    },
+    {
+      "id": "5",
+      "name": "Pupl Fiction",
+      "description": "Action & Adventure",
+      "year": 2004,
+      "img": "https://upload.wikimedia.org/wikipedia/uk/8/82/Pulp_Fiction_cover.jpg"
+    },
+    {
+      "id": "6",
+      "name": "Pupl Fiction",
+      "description": "Action & Adventure",
+      "year": 2004,
+      "img": "https://upload.wikimedia.org/wikipedia/uk/8/82/Pulp_Fiction_cover.jpg"
+    }
+  ]
+}
