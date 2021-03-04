@@ -1,0 +1,49 @@
+.btn {
+  border: none;
+  font-family: "Roboto", sans-serif;
+  color: $white;
+  padding: $spacer-xs $spacer-m;
+  border-radius: $spacer-xxs;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: $base-2;
+  cursor: pointer;
+}
+
+.logo {
+  color: $pink-1;
+  font-size: $base-3;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  cursor: pointer;
+
+  .netflix {
+    font-family: "Krona One", sans-serif;
+    font-weight: 900;
+  }
+
+  @include phone-size {
+    font-size: $base-2;
+  }
+}
+
+.nav {
+  .nav__item {
+    display: inline-block;
+    padding: $spacer-m 0;
+    margin-right: $spacer-l;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &:hover {
+      color: $pink-1;
+    }
+  }
+}
+
+.select {
+  color: $white;
+  background: $grey-3;
+  border: 0px;
+}

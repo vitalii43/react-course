@@ -1,0 +1,118 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+.hero {
+  position: relative;
+  height: 750px;
+  color: $white;
+  border-bottom: 1rem solid $grey-2;
+}
+
+.add-movie {
+  color: $pink-1;
+  background-color: rgb(98, 98, 98, 0.4);
+  @include phone-size {
+    font-size: $base-1;
+  }
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+
+  .hero-img-wrapper {
+    height: 750px;
+
+    .hero-img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .hero-gradient {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      background: rgb(0, 0, 0, 0.4);
+      background-image: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.8) 0,
+        rgba(0, 0, 0, 0) 40%,
+        rgba(0, 0, 0, 0) 75%,
+        rgba(0, 0, 0, 0.8) 100%
+      );
+      backdrop-filter: blur(3.5px);
+    }
+  }
+}
+
+.search {
+  position: absolute;
+  width: 100%;
+  max-width: 1200px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0 $spacer-xxl;
+
+  @include phone-size {
+    font-size: $base-4;
+    padding: 0 $spacer-l-phone;
+  }
+
+  .search__header {
+    margin-bottom: $spacer-l;
+    font-family: "Montserrat", sans-serif;
+    font-size: $base-6;
+
+    @include phone-size {
+      font-size: $base-5;
+      text-align: center;
+      margin-bottom: $spacer-m-phone;
+    }
+  }
+
+  .search-body {
+    display: flex;
+
+    @include phone-size {
+      flex-direction: column;
+    }
+
+    .search__input {
+      width: 100%;
+      padding: 0.5rem 1rem;
+      margin-right: $spacer-m;
+      background: rgba(77, 77, 77, 0.5);
+      backdrop-filter: blur(8px);
+      border-width: 0;
+      border-radius: 5px;
+      height: 3rem;
+      font-size: 2rem;
+      font-family: "Montserrat", sans-serif;
+      font-size: 1.5rem;
+      color: $white;
+      outline: 0;
+
+      &::placeholder {
+        font-weight: 200;
+        color: #bebebe;
+      }
+
+      @include phone-size {
+        margin-right: 0;
+        margin-bottom: $spacer-s;
+      }
+    }
+
+    .search__btn {
+      background: $pink-1;
+      text-transform: uppercase;
+      padding: $spacer-xs $spacer-xl;
+      align-self: center;
+    }
+  }
+}
