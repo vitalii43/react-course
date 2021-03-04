@@ -1,0 +1,18 @@
+@import "../styles/mixins.scss";
+@import "../styles/variables.scss";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: $spacer-xl;
+
+  @include phone-size {
+    padding: $spacer-l-phone;
+  }
+}
+
+.footer {
+  padding: $spacer-m;
+  background: $grey-2;
+  text-align: center;
+}
