@@ -8,14 +8,6 @@
   border-bottom: 1rem solid $grey-2;
 }
 
-.add-movie {
-  color: $pink-1;
-  background-color: rgb(98, 98, 98, 0.4);
-  @include phone-size {
-    font-size: $base-1;
-  }
-}
-
 .hero-background {
   position: absolute;
   top: 0;
@@ -109,7 +101,6 @@
     }
 
     .search__btn {
-      background: $pink-1;
       text-transform: uppercase;
       padding: $spacer-xs $spacer-xl;
       align-self: center;

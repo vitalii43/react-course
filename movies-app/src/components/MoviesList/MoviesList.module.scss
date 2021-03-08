@@ -19,11 +19,6 @@
   padding-top: $spacer-m;
   border-bottom: 2px solid $grey-1;
 
-  .nav__item.active {
-    margin-bottom: -2px;
-    border-bottom: 2px solid $pink-1;
-  }
-
   .movies-sort {
     &__label {
       color: $grey-light-1;
