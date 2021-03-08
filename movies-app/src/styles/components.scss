@@ -9,6 +9,26 @@
   display: inline-block;
   font-size: $base-2;
   cursor: pointer;
+
+  @include phone-size {
+    font-size: $base-1;
+  }
+
+  &-primary {
+    color: $white;
+    background-color: $pink-1;
+  }
+
+  &-outline-primary {
+    color: $pink-1;
+    border: 1px solid $pink-1;
+    background-color: transparent;
+  }
+
+  &-secondary {
+    color: $pink-1;
+    background-color: rgb(98, 98, 98, 0.4);
+  }
 }
 
 .logo {
@@ -38,6 +58,11 @@
 
     &:hover {
       color: $pink-1;
+    }
+
+    .active {
+      margin-bottom: -2px;
+      border-bottom: 2px solid $pink-1;
     }
   }
 }
