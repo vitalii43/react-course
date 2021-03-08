@@ -1,32 +1,35 @@
 import React from 'react';
 
-import styles from './Hero.scss';
+import {classNames} from '../../utils';
+import styles from './Hero.module.scss';
 import {Header} from '../../containers';
 import heroImg from '../../assets/hero-img.jpg';
 
+const cn = classNames(styles);
+
 export const Hero = (props) => (
-  <div className="hero">
+  <div className={cn("hero")}>
     <Header>
-      <span className="logo"><span className="netflix">netflix</span>rolette</span>
-      <button className="btn add-movie">+ ADD MOVIE</button>
+      <span className={cn("logo")}><span className={cn("netflix")}>netflix</span>rolette</span>
+      <button className="btn btn-secondary">+ ADD MOVIE</button>
     </Header>
 
-    <div className="hero-background">
-      <div className="hero-img-wrapper">
-        <img className="hero-img" src={heroImg}/>
-        <div className="hero-gradient"></div>
+    <div className={cn("hero-background")}>
+      <div className={cn("hero-img-wrapper")}>
+        <img className={cn("hero-img")} src={heroImg}/>
+        <div className={cn("hero-gradient")}></div>
       </div>
     </div>
 
-    <section className="search">
-      <h1 className="search__header">FIND YOUR MOVIE</h1>
-      <div className="search-body">
+    <section className={cn("search")}>
+      <h1 className={cn("search__header")}>FIND YOUR MOVIE</h1>
+      <div className={cn("search-body")}>
         <input 
           type="text" 
-          className="search__input"
+          className={cn("search__input")}
           placeholder="What do you want to watch?"
         />
-        <button className="btn search__btn">search</button>
+        <button className={`btn btn-primary ${cn("search__btn")}`}>search</button>
       </div>
     </section>
   </div>

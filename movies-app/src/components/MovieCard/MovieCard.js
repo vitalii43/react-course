@@ -1,20 +1,24 @@
 import React from 'react';
-import styles from './MovieCard.scss';
+
+import {classNames} from '../../utils';
+import styles from './MovieCard.module.scss';
 import PropTypes from 'prop-types';
+
+const cn = classNames(styles);
 
 export const MovieCard = ({movie}) => {
 
   return (
     <React.Fragment>
-      <div className="movie-img-container">
-        <img className="movie-img" src={movie.img} />
+      <div className={cn("movie-img-container")}>
+        <img className={cn("movie-img")} src={movie.img} />
       </div>
-      <div className="movie-details">
+      <div className={cn("movie-details")}>
         <div>
-          <h4 className="movie-name">{movie.name}</h4>
-          <div className="movie-description">{movie.description}</div>
+          <h4 className={cn("movie-name")}>{movie.name}</h4>
+          <div className={cn("movie-description")}>{movie.description}</div>
         </div>
-        <div className="movie-year">{movie.year}</div>
+        <div className={cn("movie-year")}>{movie.year}</div>
       </div>
     </React.Fragment>
   )
