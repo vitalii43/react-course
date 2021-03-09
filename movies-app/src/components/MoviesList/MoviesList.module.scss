@@ -1,47 +1,6 @@
 @import "../../styles/variables.scss";
 @import "../../styles/mixins.scss";
 
-.movies-list-container {
-  background: $grey-3;
-  color: $white;
-  font-family: "Roboto", sans-serif;
-  padding: 0 $spacer-xxxl $spacer-xxxl $spacer-xxxl;
-
-  @include tablet-size {
-    padding: 0 $spacer-xl-phone $spacer-xl-phone $spacer-xl-phone;
-  }
-}
-
-.movies-navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  padding-top: $spacer-m;
-  border-bottom: 2px solid $grey-1;
-
-  .movies-sort {
-    &__label {
-      color: $grey-light-1;
-      margin-right: $spacer-l;
-    }
-    &__select {
-      color: $white;
-      background: $grey-3;
-      border: 0px;
-      outline: 0;
-      cursor: pointer;
-    }
-  }
-}
-
-.result-count-container {
-  margin: $spacer-l 0;
-
-  .result-count {
-    font-family: "Krona One", sans-serif;
-  }
-}
-
 .movie-card-list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
