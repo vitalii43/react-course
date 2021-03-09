@@ -17,7 +17,10 @@ module.exports = merge(common, {
             loader: 'css-loader',
             options: {
               modules: {
-                localIdentName: "[path][name]__[local]--[hash:base64:5]"
+                compileType: "module",
+                mode: "local",
+                auto: true,
+                localIdentName: "[local]--[hash:base64:5]"
               }
             }
           },
