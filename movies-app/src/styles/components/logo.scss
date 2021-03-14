@@ -1,0 +1,16 @@
+.logo {
+  color: $pink-1;
+  font-size: $base-3;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  cursor: pointer;
+
+  .netflix {
+    font-family: "Krona One", sans-serif;
+    font-weight: 900;
+  }
+
+  @include phone-size {
+    font-size: $base-2;
+  }
+}

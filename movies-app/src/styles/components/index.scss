@@ -1,0 +1,29 @@
+@import "./buttons.scss";
+@import "./logo.scss";
+@import "./navigation.scss";
+@import "./form.scss";
+
+.h1 {
+  font-size: $base-6;
+  margin-bottom: $spacer-m;
+}
+.h2 {
+  font-size: $base-5;
+  margin-bottom: $spacer-s;
+}
+.h3 {
+  font-size: $base-4;
+  margin-bottom: $spacer-xs;
+}
+.h4 {
+  font-size: $base-3;
+  margin-bottom: $spacer-xs;
+}
+.h5 {
+  font-size: $base-2;
+  margin-bottom: $spacer-xxs;
+}
+.h5 {
+  font-size: $base-1;
+  margin-bottom: $spacer-xxs;
+}

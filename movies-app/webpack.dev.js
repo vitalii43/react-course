@@ -6,7 +6,9 @@ module.exports = merge(common, {
   mode: 'development',
   devtool: 'inline-source-map',
   devServer: {
-    contentBase: './build',
+    contentBase: path.join(__dirname, 'build'),
+    port: 8080,
+    historyApiFallback: true,
   },
   module: {
     rules: [

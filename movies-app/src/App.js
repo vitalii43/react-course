@@ -1,13 +1,17 @@
 import React from 'react';
+import {Switch, Route, Redirect} from "react-router-dom";
+
 import {Footer, ErrorBoundary} from './containers';
-import {Hero, MoviesList} from './components';
-import movies from './movies.json';
+import {Home} from './pages';
 
 export default () => (
   <div className="main">
     <ErrorBoundary>
-      <Hero/>
-      <MoviesList movies={movies}/>
+      <Switch>
+
+        <Route path="/" component={Home}/>
+        <Redirect to="/" />
+      </Switch>
       <Footer/>
     </ErrorBoundary>
   </div>

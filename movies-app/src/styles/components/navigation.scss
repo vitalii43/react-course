@@ -1,0 +1,18 @@
+.nav {
+  .nav__item {
+    display: inline-block;
+    padding: $spacer-m 0;
+    margin-right: $spacer-l;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &:hover {
+      color: $pink-1;
+    }
+
+    .active {
+      margin-bottom: -2px;
+      border-bottom: 2px solid $pink-1;
+    }
+  }
+}
