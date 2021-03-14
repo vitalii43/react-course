@@ -1,0 +1,78 @@
+.form-group {
+  margin-bottom: $spacer-m;
+  font-family: "Roboto", sans-serif;
+}
+
+.form-label {
+  display: inline-block;
+  margin-bottom: $spacer-xxs;
+  color: $pink-1;
+  text-transform: uppercase;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  font-size: 1rem;
+  padding: $spacer-xs $spacer-s;
+  font-weight: 400;
+  line-height: 1.5;
+  color: $white;
+  border-radius: 4px;
+  border: 0;
+  background: $gray-4;
+}
+
+.submit-group {
+  display: flex;
+  justify-content: flex-end;
+
+  .btn {
+    padding-left: $spacer-l;
+    padding-right: $spacer-l;
+    margin-left: $spacer-m;
+  }
+}
+
+.calendar {
+  position: relative;
+  &::-webkit-calendar-picker-indicator {
+    color: transparent;
+    background: none;
+    z-index: 1;
+  }
+  &::after {
+    font-family: "FontAwesome";
+    content: "\f073";
+    position: absolute;
+    right: 1.05rem;
+    color: $pink-1;
+    cursor: pointer;
+  }
+}
+
+/* to do: remove */
+.select {
+  color: $white;
+  background: $gray-3;
+  border: 0px;
+}
+
+.dropdown-container {
+  position: relative;
+  .dropdown {
+    -moz-appearance: none; /* Firefox */
+    -webkit-appearance: none; /* Safari and Chrome */
+    appearance: none;
+  }
+  &::after {
+    position: absolute;
+    font-family: "FontAwesome";
+    content: "\f0d7";
+    display: inline-block;
+    top: 3px;
+    right: $spacer-s;
+    font-size: 1.3rem;
+    color: $pink-1;
+  }
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 
+import {Link} from 'react-router-dom';
 import {classNames} from '../../utils';
 import styles from './Hero.module.scss';
 import {Header} from '../../containers';
@@ -11,7 +12,7 @@ export const Hero = (props) => (
   <div className={cn("hero")}>
     <Header>
       <span className={cn("logo")}><span className={cn("netflix")}>netflix</span>rolette</span>
-      <button className="btn btn-secondary">+ ADD MOVIE</button>
+      <Link className="btn btn-secondary" to="/create">+ ADD MOVIE</Link>
     </Header>
 
     <div className={cn("hero-background")}>

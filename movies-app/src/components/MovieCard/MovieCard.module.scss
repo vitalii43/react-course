@@ -1,6 +1,7 @@
 @import "../../styles/variables.scss";
 
 .movie-img-container {
+  position: relative;
   margin-bottom: $spacer-s;
   .movie-img {
     width: 100%;
@@ -10,16 +11,80 @@
 .movie-details {
   display: flex;
   justify-content: space-between;
-  color: $grey-light-1;
+  color: $gray-light-1;
 
   .movie-description {
-    color: $grey-light-2;
+    color: $gray-light-2;
   }
 
   .movie-year {
     align-self: flex-start;
     padding: 0.2rem 0.5rem;
-    border: 1px solid $grey-light-1;
+    border: 1px solid $gray-light-1;
     border-radius: 5px;
+  }
+}
+
+.menu {
+  position: absolute;
+  top: $spacer-m;
+  right: $spacer-m;
+}
+
+.menu-opener {
+  position: relative;
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  background: $gray-3;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+
+  .menu-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .movie-img-container:hover & {
+    display: block;
+  }
+
+  &,
+  &.hidden,
+  .movie-img-container:hover &.hidden {
+    display: none;
+  }
+}
+
+.menu-body {
+  position: relative;
+  display: none;
+  background: $gray-3;
+  padding: $spacer-m 0 $spacer-xs 0;
+  border-radius: 3px;
+
+  &.active {
+    display: block;
+  }
+
+  .menu-close-btn {
+    position: absolute;
+    cursor: pointer;
+    font-size: 1.5rem;
+    top: -0.4rem;
+    right: $spacer-xxs;
+  }
+
+  .menu-item {
+    padding: $spacer-xxs $spacer-s;
+    width: 125px;
+    min-width: fit-content;
+
+    &:hover {
+      background-color: $pink-1;
+    }
   }
 }

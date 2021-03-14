@@ -1,5 +1,7 @@
 import React from 'react';
+import { useHistory } from "react-router-dom";
 
+import {Menu} from './Menu';
 import {classNames} from '../../utils';
 import styles from './MovieCard.module.scss';
 import PropTypes from 'prop-types';
@@ -7,11 +9,16 @@ import PropTypes from 'prop-types';
 const cn = classNames(styles);
 
 export const MovieCard = ({movie}) => {
+  const {push} = useHistory();
 
   return (
     <React.Fragment>
       <div className={cn("movie-img-container")}>
         <img className={cn("movie-img")} src={movie.img} />
+        <Menu className={cn("menu")}
+          onEdit={() => push(`/edit/${movie.id}`)}
+          onDelete={() => push(`/delete/${movie.id}`)}
+        />
       </div>
       <div className={cn("movie-details")}>
         <div>

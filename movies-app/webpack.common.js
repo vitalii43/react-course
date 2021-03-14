@@ -7,7 +7,8 @@ module.exports = {
   entry: './src/index.js',
   output: {
     filename: '[name].bundle[hash].js',
-    path: path.resolve(__dirname, 'build')
+    path: path.resolve(__dirname, 'build'),
+    publicPath: '/'
   },
   resolve: {
     modules: [path.resolve(__dirname, './src'), 'node_modules'],
@@ -38,6 +39,10 @@ module.exports = {
         test: /\.xml$/i,
         use: ['xml-loader'],
       },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        type: 'asset/resource',
+      }
     ]
   },
   plugins: [

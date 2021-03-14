@@ -2,7 +2,7 @@
 @import "../../styles/mixins.scss";
 
 .movies-list-container {
-  background: $grey-3;
+  background: $gray-3;
   color: $white;
   font-family: "Roboto", sans-serif;
   padding: 0 $spacer-xxxl $spacer-xxxl $spacer-xxxl;
@@ -17,16 +17,16 @@
   justify-content: space-between;
   align-items: baseline;
   padding-top: $spacer-m;
-  border-bottom: 2px solid $grey-1;
+  border-bottom: 2px solid $gray-1;
 
   .movies-sort {
     &__label {
-      color: $grey-light-1;
+      color: $gray-light-1;
       margin-right: $spacer-l;
     }
     &__select {
       color: $white;
-      background: $grey-3;
+      background: $gray-3;
       border: 0px;
       outline: 0;
       cursor: pointer;
