@@ -1,9 +1,16 @@
+$fa-font-path: "../../node_modules/font-awesome/fonts";
+@import "font-awesome/scss/font-awesome";
 @import "./reset.scss";
 @import "./variables.scss";
 @import "./fonts.scss";
 @import "./mixins.scss";
 
-@import "./components.scss";
+@import "./components/index.scss";
 
 .main {
+  font-family: "Montserrat", sans-serif;
+}
+
+.fa-times-thin:before {
+  content: "\00d7";
 }
