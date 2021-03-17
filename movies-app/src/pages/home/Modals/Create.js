@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 
 import {Modal} from '../../../components';
 import {MovieForm} from './MovieForm';
@@ -8,14 +8,13 @@ import {classNames} from '../../../utils';
 const cn = classNames(styles);
 
 export const CreateMovie = ({history}) => {
+  const redirect = () => {
+    history.push('/');
+  }
+
   return (
-    <Modal
-      closeModal={() => {
-        history.push('/');
-      }}
-      title="CREATE MOVIE"
-    >
-      <MovieForm onSubmit={(data) => history.push('/')}/>
+    <Modal closeModal={redirect} title="CREATE MOVIE">
+      <MovieForm onSubmit={(data) => redirect()}/>
     </Modal>
   );
 }

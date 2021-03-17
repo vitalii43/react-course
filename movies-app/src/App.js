@@ -8,7 +8,6 @@ export default () => (
   <div className="main">
     <ErrorBoundary>
       <Switch>
-
         <Route path="/" component={Home}/>
         <Redirect to="/" />
       </Switch>

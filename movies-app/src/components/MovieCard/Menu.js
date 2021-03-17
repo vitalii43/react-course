@@ -2,15 +2,18 @@ import React, {useState} from 'react';
 
 import {classNames} from '../../utils';
 import styles from './MovieCard.module.scss';
-import PropTypes from 'prop-types';
 
 const cn = classNames(styles);
 
 export const Menu = (props) => {
   const [menuStatus, setMenuStatus] = useState(false);
+
   const showMenu = (flag) => {
-    flag && setMenuStatus(true);
-    !flag && setMenuStatus(false);
+    if (flag) {
+      setMenuStatus(true);
+    } else {
+      setMenuStatus(false);
+    }
   }
 
   const handleMenu = (action) => {
@@ -31,12 +34,13 @@ export const Menu = (props) => {
 
   return (
     <div className={props.className}>
-      <div 
-        className={cn('menu-opener', menuStatus ? 'hidden' : '')} 
+      <div className={cn('menu-opener', menuStatus ? 'hidden' : '')} 
         onClick={() => showMenu(true)}>
         <i className={cn("fa", "fa-ellipsis-v", "menu-icon")} aria-hidden="true"></i>
       </div>
-      <div className={cn('menu-body', menuStatus ? 'active' : '')}>
+      <div className={cn('menu-body', menuStatus ? 'active' : '')}
+        onMouseLeave={() => {showMenu(false)}}
+      >
         <div name="close" className={cn('menu-close-btn')}
           onClick={() => handleMenu('close')}
         >
