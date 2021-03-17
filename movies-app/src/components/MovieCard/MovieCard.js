@@ -1,24 +1,26 @@
-import React from 'react';
-import { useHistory } from "react-router-dom";
+import React, { useCallback } from 'react';
+import { useHistory, Link } from "react-router-dom";
 
 import {Menu} from './Menu';
+import {Movie} from '../../types';
 import {classNames} from '../../utils';
 import styles from './MovieCard.module.scss';
-import PropTypes from 'prop-types';
 
 const cn = classNames(styles);
 
-export const MovieCard = ({movie}) => {
+export const MovieCard = (props) => {
+  const {movie} = props;
   const {push} = useHistory();
+  const onEdit = useCallback(() => {push(`/edit/${movie.id}`)}, [movie, push]);
+  const onDelete = useCallback(() => {push(`/delete/${movie.id}`)}, [movie, push]);
 
   return (
-    <React.Fragment>
+    <>
       <div className={cn("movie-img-container")}>
-        <img className={cn("movie-img")} src={movie.img} />
-        <Menu className={cn("menu")}
-          onEdit={() => push(`/edit/${movie.id}`)}
-          onDelete={() => push(`/delete/${movie.id}`)}
-        />
+        <Link to={`/details/${movie.id}`}>
+          <img className={cn("movie-img")} src={movie.img} />
+        </Link>
+        <Menu className={cn("menu")} onDelete={onDelete} onEdit={onEdit}/>
       </div>
       <div className={cn("movie-details")}>
         <div>
@@ -27,15 +29,10 @@ export const MovieCard = ({movie}) => {
         </div>
         <div className={cn("movie-year")}>{movie.year}</div>
       </div>
-    </React.Fragment>
+    </>
   )
 }
 
 MovieCard.propTypes = {
-  movie: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-    year: PropTypes.number.isRequired,
-    img: PropTypes.string.isRequired,
-  })
+  movie: Movie
 }

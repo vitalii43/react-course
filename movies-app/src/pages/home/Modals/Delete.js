@@ -5,21 +5,16 @@ import {classNames} from '../../../utils';
 
 const cn = classNames(styles);
 
-export const DeleteMovie = (props) => {
-  const onDeleteMovie = (e) => {
-    setShowModal(false);
+export const DeleteMovie = ({history}) => {
+  const redirect = () => {
+    history.push('/');
   }
 
   return (
-    <Modal 
-      closeModal={() => {
-        props.history.push('/');
-      }}
-      title="DELETE MOVIE"
-    >
+    <Modal closeModal={redirect} title="DELETE MOVIE">
       <h5>Are you shure you want to delete this movie?</h5>
       <div className="form-group submit-group">
-        <button className="btn btn-primary" onClick={onDeleteMovie}>CONFIRM</button>
+        <button className="btn btn-primary" onClick={redirect}>CONFIRM</button>
       </div>
     </Modal>
   )

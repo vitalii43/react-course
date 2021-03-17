@@ -5,6 +5,7 @@
   display: flex;
   justify-content: space-between;
   padding: $spacer-xl;
+  color: $pink-1;
 
   @include phone-size {
     padding: $spacer-l-phone;

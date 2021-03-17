@@ -17,6 +17,7 @@
   justify-content: space-between;
   align-items: baseline;
   padding-top: $spacer-m;
+  margin-bottom: -2px;
   border-bottom: 2px solid $gray-1;
 
   .movies-sort {
@@ -39,5 +40,122 @@
 
   .result-count {
     font-family: "Krona One", sans-serif;
+  }
+}
+
+.search {
+  position: absolute;
+  width: 100%;
+  max-width: 1200px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0 $spacer-xxl;
+
+  @include phone-size {
+    font-size: $base-4;
+    padding: 0 $spacer-l-phone;
+  }
+
+  .search__header {
+    margin-bottom: $spacer-l;
+    font-family: "Montserrat", sans-serif;
+    font-size: $base-6;
+
+    @include phone-size {
+      font-size: $base-5;
+      text-align: center;
+      margin-bottom: $spacer-m-phone;
+    }
+  }
+
+  .search-body {
+    display: flex;
+
+    @include phone-size {
+      flex-direction: column;
+    }
+
+    .search__input {
+      width: 100%;
+      padding: 0.5rem 1rem;
+      margin-right: $spacer-m;
+      background: rgba(77, 77, 77, 0.5);
+      backdrop-filter: blur(8px);
+      border-width: 0;
+      border-radius: 5px;
+      height: 3rem;
+      font-size: 2rem;
+      font-family: "Montserrat", sans-serif;
+      font-size: 1.5rem;
+      color: $white;
+      outline: 0;
+
+      &::placeholder {
+        font-weight: 200;
+        color: #bebebe;
+      }
+
+      @include phone-size {
+        margin-right: 0;
+        margin-bottom: $spacer-s;
+      }
+    }
+
+    .search__btn {
+      text-transform: uppercase;
+      padding: $spacer-xs $spacer-xl;
+      align-self: center;
+    }
+  }
+}
+
+.details {
+  padding: 0 $spacer-xl $spacer-xl $spacer-xl;
+  display: flex;
+  max-height: 580px;
+  overflow: auto;
+
+  .movie-img-container {
+    flex-shrink: 0;
+    height: 500px;
+    .movie-img {
+      height: 100%;
+    }
+  }
+}
+.details-body {
+  padding: $spacer-l;
+
+  .details-item {
+    margin-bottom: $spacer-l;
+  }
+
+  .header-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: $spacer-xxs;
+    .header {
+      margin: 0;
+    }
+    .rating {
+      display: inline-block;
+      border: 1px solid $white;
+      border-radius: 50%;
+      padding: $spacer-s-phone;
+      font-size: $base-3;
+      color: $green-1;
+      font-weight: 600;
+      margin-left: $spacer-m;
+    }
+  }
+  .diration-time,
+  .release-date {
+    color: $pink-1;
+    font-size: $base-3;
+    font-weight: 600;
+  }
+  .release-date {
+    margin-right: $spacer-l;
   }
 }
