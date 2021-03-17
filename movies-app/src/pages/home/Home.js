@@ -1,20 +1,26 @@
-import React, {useCallback, useState} from 'react';
-import {Switch, Route, Link, Redirect} from "react-router-dom";
+import React, {useEffect} from 'react';
+import {Switch, Route, Redirect} from "react-router-dom";
 
 import movies from './movies.json';
-import {MoviesList, Hero} from '../../components';
+import {MoviesList} from '../../components';
 import {CreateMovie, EditMovie, DeleteMovie} from './Modals';
-
+import {Search} from './Search';
+import {Details} from './Details';
+import {useScrollTop} from './Hooks';
 import {classNames} from '../../utils';
 import styles from './Home.module.scss';
 
 const cn = classNames(styles);
 
-export const Home = (props) => {
-  console.log(props)
+export const Home = () => {
+  useScrollTop();
   return (
     <>
-      <Hero/>
+      <Switch>
+        <Route exact path="/" component={Search} />
+        <Route exact path="/details/:movieId" component={Details} />
+      </Switch>
+
       <div className={cn("movies-list-container")}>
         <nav className={cn("movies-navbar")}>
           <ul className="nav">
@@ -39,9 +45,9 @@ export const Home = (props) => {
       </div>
 
       <Switch>
-        <Route exect path="/create" component={CreateMovie}/>
-        <Route exect path="/edit/:movieId" component={EditMovie}/>
-        <Route exect path="/delete/:movieId" component={DeleteMovie}/>
+        <Route exact path="/create" component={CreateMovie}/>
+        <Route exact path="/edit/:movieId" component={EditMovie}/>
+        <Route exact path="/delete/:movieId" component={DeleteMovie}/>
         <Redirect to="/" />
       </Switch>
     </>
