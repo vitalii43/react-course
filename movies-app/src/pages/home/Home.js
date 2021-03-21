@@ -13,6 +13,7 @@ import styles from './Home.module.scss';
 const cn = classNames(styles);
 
 export const Home = () => {
+  // custom hook
   useScrollTop();
   return (
     <>
