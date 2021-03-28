@@ -1,8 +1,15 @@
 import PropTypes from 'prop-types';
 
 export const Movie = PropTypes.shape({
-  name: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  year: PropTypes.number.isRequired,
-  img: PropTypes.string.isRequired,
+  budget: PropTypes.number,
+  genres: PropTypes.array,
+  overview: PropTypes.string,
+  poster_path: PropTypes.string,
+  release_date: PropTypes.string,
+  revenue: PropTypes.number,
+  title: PropTypes.string,
+  tagline: PropTypes.string,
+  runtime: PropTypes.number,
+  vote_average: PropTypes.number,
+  vote_count: PropTypes.number
 });

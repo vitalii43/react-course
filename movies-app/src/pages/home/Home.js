@@ -1,24 +1,32 @@
 import React, {useEffect} from 'react';
 import {Switch, Route, Redirect} from "react-router-dom";
+import {connect} from 'react-redux';
 
-import movies from './movies.json';
 import {MoviesList} from '../../components';
 import {CreateMovie, EditMovie, DeleteMovie} from './Modals';
 import {Search} from './Search';
-import {Details} from './Details';
+import Details from './Details';
 import {useScrollTop} from './Hooks';
 import {classNames} from '../../utils';
 import styles from './Home.module.scss';
+import {getMovies} from '../../store/movies'
 
 const cn = classNames(styles);
 
-export const Home = () => {
+const Home = (props) => {
+  const {getMovies, movies} = props;
+  // custom hook
   useScrollTop();
+
+  useEffect(() => {
+    getMovies()
+  }, []);
+
   return (
     <>
       <Switch>
-        <Route exact path="/" component={Search} />
-        <Route exact path="/details/:movieId" component={Details} />
+        <Route exact path="/movie" component={Search} />
+        <Route exact path="/movie/details/:movieId" component={Details} />
       </Switch>
 
       <div className={cn("movies-list-container")}>
@@ -45,11 +53,25 @@ export const Home = () => {
       </div>
 
       <Switch>
-        <Route exact path="/create" component={CreateMovie}/>
-        <Route exact path="/edit/:movieId" component={EditMovie}/>
-        <Route exact path="/delete/:movieId" component={DeleteMovie}/>
-        <Redirect to="/" />
+        <Route exact path="/movie/create" component={CreateMovie}/>
+        <Route exact path="/movie/edit/:movieId" component={EditMovie}/>
+        <Route exact path="/movie/delete/:movieId" component={DeleteMovie}/>
+        <Redirect to="/movie" />
       </Switch>
     </>
   )
 }
+
+const mapStateToProps = (state, ownProps) => {
+  return {
+    movies: state.movies
+  }
+};
+
+const mapDispatchToProps = (dispatch, ownProps) => {
+  return {
+    getMovies: () => dispatch({type: 'REQUEST_MOVIES'})
+  }
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home);

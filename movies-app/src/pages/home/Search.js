@@ -13,7 +13,7 @@ export const Search = (props) => {
     <HeroBackground>
       <Header>
         <span className={cn("logo")}><span className={cn("netflix")}>netflix</span>rolette</span>
-        <Link className="btn btn-secondary" to="/create">+ ADD MOVIE</Link>
+        <Link className="btn btn-secondary" to="/movie/create">+ ADD MOVIE</Link>
       </Header>
       <section className={cn("search")}>
         <h1 className={cn("search__header")}>FIND YOUR MOVIE</h1>

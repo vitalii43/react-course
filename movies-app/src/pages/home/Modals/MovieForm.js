@@ -31,11 +31,20 @@ export class MovieForm extends Component {
     onSubmit: () => {}
   }
 
+  static getDerivedStateFromProps(nextProps, prevState) {
+    if (prevState.id !== nextProps.prefill.id) {
+      return {
+        ...nextProps.prefill
+      }
+    } else {
+      return null;
+    }
+  }
+
   constructor(props) {
     super(props);
-
     this.state = {
-      ...this.props.prefill
+      ...props.prefill
     }
   }
 
@@ -80,8 +89,8 @@ export class MovieForm extends Component {
           <input 
             type="date"
             className="form-control calendar"
-            value={state.releaseDate}
-            name='releaseDate'
+            value={state.release_date}
+            name='release_date'
             onChange={handleChange}
           />
         </div>
@@ -90,8 +99,8 @@ export class MovieForm extends Component {
           <input 
             type="text"
             className="form-control"
-            value={state.movieUrl}
-            name="movieUrl"
+            value={state.poster_path}
+            name="poster_path"
             onChange={handleChange}
           />
         </div>
@@ -102,7 +111,7 @@ export class MovieForm extends Component {
               type="text"
               className="form-control dropdown"
               value={state.genre}
-              name="genre"
+              name="genres"
               onChange={handleChange}
             >
               <option value="default">Select Genre</option>

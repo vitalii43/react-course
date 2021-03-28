@@ -8,10 +8,11 @@ export default () => (
   <div className="main">
     <ErrorBoundary>
       <Switch>
-        <Route path="/" component={Home}/>
-        <Redirect to="/" />
+        <Route path="/movie" component={Home}/>
+        <Redirect to="/movie" />
       </Switch>
       <Footer/>
     </ErrorBoundary>
+
   </div>
 )
