@@ -1,0 +1,22 @@
+@import "../../styles/variables.scss";
+
+.page-container {
+  position: fixed;
+  background-color: $gray-3;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: $white;
+}
+
+.body {
+  position: relative;
+  top: 30%;
+  text-align: center;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+}
