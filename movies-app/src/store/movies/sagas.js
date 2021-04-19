@@ -85,4 +85,5 @@ export default function* () {
   yield takeEvery(types.REQUEST_MOVIE, fetchMovie);
   yield takeEvery(types.UPDATE_MOVIE, updateMovie);
   yield takeEvery(types.DELETE_MOVIE, deleteMovie);
+  yield takeEvery(types.CREATE_MOVIE, createMovie);
 }
